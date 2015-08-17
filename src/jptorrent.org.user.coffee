@@ -4,6 +4,7 @@
 // @namespace  http://www.jptorrent.org/
 // @version    2015.08.16
 // @match      http://www.jptorrent.org/*
+// @match      http://host2.jptorrent.org/*
 // @run-at     document-end
 // @grant      none
 // ==/UserScript==

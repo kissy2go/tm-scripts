@@ -2,7 +2,7 @@
 // ==UserScript==
 // @name       alabout.com
 // @namespace  http://www.alabout.com/
-// @version    2015.08.16
+// @version    2016.08.27
 // @match      http://www.alabout.com/*
 // @run-at     document-end
 // @grant      none
@@ -22,5 +22,6 @@ if links.length > 0
         url += "?attempt=1"
 
       link.href = url
+      link.innerText = url
     catch e
       console.log e

@@ -2,7 +2,7 @@
 // ==UserScript==
 // @name       akiba-online.com
 // @namespace  https://www.akiba-online.com
-// @version    2015.11.04
+// @version    2016.08.29
 // @match      https://www.akiba-online.com/*
 // @run-at     document-end
 // @grant      none
@@ -26,6 +26,15 @@ if links.length > 0
       link = links.item(i)
       path = decodeURIComponent(link.href.split(/.*viewer\.php\?file=(.*)/)[1])
       link.href = "http://imgsoo.net/images/#{path}"
+    catch e
+      console.log e
+links = document.querySelectorAll("a[href*='imgsilo.net/viewer.php']")
+if links.length > 0
+  for i in [0..links.length - 1]
+    try
+      link = links.item(i)
+      path = decodeURIComponent(link.href.split(/.*viewer\.php\?file=(.*)/)[1])
+      link.href = "http://imgsilo.net/images/#{path}"
     catch e
       console.log e
 
